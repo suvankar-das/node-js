@@ -4,7 +4,21 @@
 // console.log(global);
 
 
-let calc = require("./calculator");
-let name1 = require("./calculator");
-console.log(calc(2, 3));
-console.log(name1);
+// let otherModuleObject = require("./calculator");
+
+// let personDetailsObj = otherModuleObject.personObj;
+// let calcu2 = otherModuleObject.calc(2, 2);
+
+// console.log(personDetailsObj);
+// console.log(calcu2);
+
+
+
+// or using destructuring
+let { calc, personObj } = require("./calculator");
+
+let personDetailsObj = personObj;
+let calcu2 = calc(2, 2);
+
+console.log(personDetailsObj);
+console.log(calcu2);

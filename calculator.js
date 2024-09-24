@@ -7,9 +7,19 @@ function calculate(a, b) {
     return a + b;
 }
 
-let name = "Suvankar";
+let Id = "1001";
+
+let personDetails = {
+    Id: Id,
+    name: "Suvankar"
+}
 
 // giving access to calculate function.
 //module.exports = calculate;
 
 // now If you want to pass multiple data , You need to pass those as an object
+
+module.exports = {
+    personObj: personDetails,
+    calc: calculate
+}
