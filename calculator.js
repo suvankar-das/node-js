@@ -14,12 +14,6 @@ let personDetails = {
     name: "Suvankar"
 }
 
-// giving access to calculate function.
-//module.exports = calculate;
 
-// now If you want to pass multiple data , You need to pass those as an object
-
-module.exports = {
-    personObj: personDetails,
-    calc: calculate
-}
+export const personObj = personDetails;
+export const calc = calculate;
