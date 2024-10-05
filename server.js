@@ -60,6 +60,11 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
 
+// product route
+// /api/v1/product redirects request to productRoutes.js file
+app.use('/api/v1/products', require('./routes/productRoutes'));
+
+
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
