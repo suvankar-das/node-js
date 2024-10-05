@@ -41,3 +41,38 @@ In Express, there are five main types of middleware:
 - If face problem while connecting mongo , first check in services.msc , whether mongo is running or not.
 - OR , run in command prompt via admin mode , `net start MongoDB`
 
+
+--- 
+before applying toObject , response getting 
+```
+{
+    "status": 200,
+    "message": "Product created successfully",
+    "body": {
+        "name": "Puma shoe",
+        "price": 100,
+        "brand": "Puma",
+        "_id": "6700ff2e78ab268323a17fc9",
+        "createdAt": "2024-10-05T08:56:14.347Z",
+        "updatedAt": "2024-10-05T08:56:14.347Z",
+        "__v": 0
+    }
+}
+```
+
+After applying toObject() , 
+
+```
+{
+    "status": 200,
+    "message": "Product created successfully",
+    "body": {
+        "name": "Adidas Tshirt",
+        "price": 100,
+        "brand": "Adidas",
+        "createdAt": "2024-10-05T13:37:15.838Z",
+        "updatedAt": "2024-10-05T13:37:15.838Z",
+        "id": "6701410ba5ce22fa1295149b"
+    }
+}
+```
