@@ -1,12 +1,19 @@
 const express = require("express");
 const dotEnv = require("dotenv");
 const cors = require("cors");
+const dbConnection = require("./database/connection");
 
 // create instance of express
 const app = express();
 
 // load env
 dotEnv.config();
+
+
+// database connection
+dbConnection();
+
+
 
 /* Middleware in Node and Express is a function that processes requests and responses
  between the client and server, allowing for tasks like modifying request objects,

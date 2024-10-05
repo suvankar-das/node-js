@@ -35,3 +35,9 @@ In Express, there are five main types of middleware:
    const cors = require('cors');
    app.use(cors());
    ```
+
+
+------ 
+- If face problem while connecting mongo , first check in services.msc , whether mongo is running or not.
+- OR , run in command prompt via admin mode , `net start MongoDB`
+
